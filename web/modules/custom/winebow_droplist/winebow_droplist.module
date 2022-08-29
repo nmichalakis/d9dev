@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains winebow_droplist.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function winebow_droplist_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the winebow_droplist module.
+    case 'help.page.winebow_droplist':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Winebow Dropdown Lists Widgets') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function winebow_droplist_theme() {
+  return [
+    'winebow_droplist_country_block' => [
+      'variables' => [
+        'data' => NULL
+      ],
+      'template' => 'winebow-droplist-country-block',
+    ],
+  ];
+}

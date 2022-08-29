@@ -1,0 +1,23 @@
+uuid: 79cb7aa3-a2a9-4811-9a11-8c61617f25c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.telephone.field_number
+    - paragraphs.paragraphs_type.telephone
+id: paragraph.telephone.default
+targetEntityType: paragraph
+bundle: telephone
+mode: default
+content:
+  field_number:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

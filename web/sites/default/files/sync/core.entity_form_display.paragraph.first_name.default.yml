@@ -1,0 +1,23 @@
+uuid: cff57629-a024-41d4-895d-cacd7a99e41e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.first_name.field_first_name
+    - paragraphs.paragraphs_type.first_name
+id: paragraph.first_name.default
+targetEntityType: paragraph
+bundle: first_name
+mode: default
+content:
+  field_first_name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

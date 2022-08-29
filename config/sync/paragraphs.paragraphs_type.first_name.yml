@@ -1,0 +1,10 @@
+uuid: ecd252cb-5fbd-4003-b49b-a5c3a5cb7429
+langcode: en
+status: true
+dependencies: {  }
+id: first_name
+label: 'First Name'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: 9123c9a5-c6bb-4cbc-a25b-6e2f7e6364b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.exhibit_item.field_value
+    - paragraphs.paragraphs_type.exhibit_item
+id: paragraph.exhibit_item.default
+targetEntityType: paragraph
+bundle: exhibit_item
+mode: default
+content:
+  field_value:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

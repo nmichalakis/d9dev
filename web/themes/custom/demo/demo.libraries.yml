@@ -1,0 +1,14 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      assets/css/demo.style.css: {}
+  js:
+    assets/js/demo.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+accordion-js:
+  version: VERSION
+  js:
+    src/components/accordion/js/accordion.js: { attributes: { type: 'text/javascript' } }

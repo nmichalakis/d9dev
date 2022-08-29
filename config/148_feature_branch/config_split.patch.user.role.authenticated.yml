@@ -1,0 +1,15 @@
+adding:
+  dependencies:
+    config:
+      - filter.format.basic_html
+    module:
+      - contact
+      - filter
+      - media
+      - system
+  permissions:
+    - 'access site-wide contact form'
+    - 'access content'
+    - 'use text format basic_html'
+    - 'view media'
+removing: {  }

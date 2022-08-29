@@ -1,0 +1,11 @@
+uuid: fd86bf35-1675-4e69-a105-acfabeb8401b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel
+id: block_content.carousel
+target_entity_type_id: block_content
+target_bundle: carousel
+default_langcode: site_default
+language_alterable: false

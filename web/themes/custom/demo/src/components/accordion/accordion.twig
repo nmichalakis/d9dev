@@ -1,0 +1,44 @@
+{# {% set title_classes = ['wpi-accordion__item-title-wrapper'] %}
+{% set icon_classes = ['wpi-accordion__icon'] %}
+
+{% if expanded %}
+  {% set title_classes = title_classes|merge(
+    ['wpi-accordion__item-title-wrapper--active']
+  ) %}
+  {% set icon_classes = icon_classes|merge(['wpi-accordion__icon--active']) %}
+{% endif %}
+
+<div {{ attributes.addClass(title_classes) }}>
+  <span class="{{icon_classes|join(' ')}}">
+    {{ source(directory ~ '/dist/images/icons/chev-down.svg') }}
+  </span>
+  <span class="wpi-accordion__item-title">{{ title }}</span>
+</div>
+
+
+{% set body_classes = ['wpi-accordion__item-body-wrapper'] %}
+{% if element['#object'].field_expanded.value == 1 %}
+  {% set classes = classes|merge(
+    ['wpi-accordion__item-body-wrapper--active']
+  ) %}
+{% endif %}
+<div {{ attributes.addClass(classes) }}>
+  <div class="wpi-accordion__item-body">{{ body }}</div>
+</div>
+ #}
+
+ {{ attach_library('demo/accordion-js') }}
+
+<details class="accordion-item">
+	<summary class="accordion-item__header">
+    		<div class="accordion-item__icon">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+		</div>
+		<span class="accordion-item__title">
+			{{ title }}
+		</span>
+	</summary>
+	<div class="accordion-item__body">
+		{{ body }}
+	</div>
+</details>

@@ -1,0 +1,18 @@
+uuid: 6c302ca7-7a65-46eb-a3c8-675b40d47f5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.last_name
+id: paragraph.last_name.created
+field_name: created
+entity_type: paragraph
+bundle: last_name
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

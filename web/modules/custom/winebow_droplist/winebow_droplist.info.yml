@@ -1,0 +1,5 @@
+name: 'winebow_droplist'
+type: module
+description: 'Winebow Dropdown Lists Widgets'
+core_version_requirement: ^9 || ^10
+package: 'Custom'

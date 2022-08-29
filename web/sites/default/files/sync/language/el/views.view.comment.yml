@@ -1,0 +1,43 @@
+label: Σχόλια
+display:
+  default:
+    display_title: Προεπιλεγμένο
+    display_options:
+      title: Σχόλια
+      fields:
+        comment_bulk_form:
+          action_title: Ενέργεια
+        subject:
+          label: Θέμα
+        operations:
+          label: Λειτουργίες
+      exposed_form:
+        options:
+          submit_button: Φίλτρο
+      filters:
+        subject:
+          expose:
+            label: Θέμα
+        langcode:
+          expose:
+            label: Γλώσσα
+  page_published:
+    display_options:
+      menu:
+        title: Σχόλια
+  page_unapproved:
+    display_options:
+      fields:
+        comment_bulk_form:
+          action_title: Ενέργεια
+        subject:
+          label: Θέμα
+        operations:
+          label: Λειτουργίες
+      filters:
+        subject:
+          expose:
+            label: Θέμα
+        langcode:
+          expose:
+            label: Γλώσσα

@@ -1,0 +1,44 @@
+uuid: b4740cb1-b0e8-408f-b376-f2c5592cbb18
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.media_music.body
+    - field.field.node.media_music.field_media_category_ref
+    - field.field.node.media_music.field_sound_file
+    - node.type.media_music
+  module:
+    - text
+    - user
+id: node.media_music.teaser
+targetEntityType: node
+bundle: media_music
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media_category_ref:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_sound_file:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  links: true

@@ -1,0 +1,29 @@
+uuid: 99350346-9d47-4f8c-9130-6d1fa2f08384
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sound_file
+    - media.type.audio
+    - node.type.media_music
+id: node.media_music.field_sound_file
+field_name: field_sound_file
+entity_type: node
+bundle: media_music
+label: 'Sound File'
+description: UPloadasdfasf
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

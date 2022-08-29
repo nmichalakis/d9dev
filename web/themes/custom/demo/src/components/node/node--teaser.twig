@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Template for a Node component.
+ */
+#}
+{% set modifier_class = modifier ? modifier : '' %}
+
+{%
+  set classes = [
+  'node',
+  not node.isPublished() ? 'node--unpublished',
+  node.bundle|clean_class,
+  node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+  modifier,
+  'bg-primary',
+]
+%}
+
+<article {{ attributes }} >
+{# <article{{ attributes.addClass(classes) }}> #}
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <div class="{{modifier}}__image">
+    {{ image }}
+  </div>
+  <div class="{{modifier}}__title">
+   <a href="{{ url }}" hreflang="{{ language }}">{{ title }}</a>
+  </div>
+  <div class="{{modifier}}__body bg-secondary">
+    {{ body }}
+  </div>
+</article>

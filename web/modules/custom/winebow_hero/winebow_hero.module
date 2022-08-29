@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Contains winebow_hero.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function winebow_hero_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the winebow_hero module.
+    case 'help.page.winebow_hero':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Hero Section Block, for nodes, taxonomies  and everything that needs a hero.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function winebow_hero_theme() {
+  return [
+    'hero_section_block' => [
+      'variables' => [
+        'data' => NULL
+      ],
+      'template' => 'hero-section-block',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme().
+ */
+function winebow_hero_theme() {
+  return [
+    'winebow_hero_block' => [
+      'variables' => [
+        'content' => NULL
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

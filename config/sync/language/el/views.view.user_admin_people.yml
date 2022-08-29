@@ -1,0 +1,29 @@
+display:
+  default:
+    display_title: Προεπιλεγμένο
+    display_options:
+      fields:
+        name:
+          label: 'Όνομα χρήστη'
+        status:
+          label: Κατάσταση
+          settings:
+            format_custom_true: Ενεργό
+        roles_target_id:
+          label: Ρόλοι
+        operations:
+          label: Λειτουργίες
+      exposed_form:
+        options:
+          submit_button: Φίλτρο
+      filters:
+        status:
+          group_info:
+            label: Κατάσταση
+            group_items:
+              1:
+                title: Ενεργό
+  page_1:
+    display_options:
+      menu:
+        title: Λίστα

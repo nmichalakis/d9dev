@@ -1,0 +1,9 @@
+widget:
+  css:
+    theme:
+      css/widget.css: {}
+
+double_field_example:
+  css:
+    component:
+      css/double-field-example-widget.css: {}

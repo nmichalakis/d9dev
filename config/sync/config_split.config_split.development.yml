@@ -1,0 +1,16 @@
+uuid: a47f5fb7-4cc3-420d-819b-339aa1a1a97a
+langcode: en
+status: true
+dependencies: {  }
+id: development
+label: Development
+description: 'Holds all the devel, stage file proxy, twig vardumper etc module settings config yml files.'
+weight: 0
+stackable: false
+storage: folder
+folder: ../config/dev
+module:
+  devel: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }

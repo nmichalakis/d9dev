@@ -1,0 +1,47 @@
+.accordion-item {
+  &__header {
+    position: relative;
+    &--active,
+    &:active,
+    &:hover,
+    &:focus {
+      color: red;
+      background-color: gray;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    width: 18px;
+
+    &--active {
+      // color: $brand-red;
+      color: red;
+    }
+  }
+
+  &__title {
+    // @extend .h4;
+    //   margin-bottom: spacing(xxs);
+    cursor: pointer;
+    //   padding: spacing(s);
+    font-weight: 700;
+	padding-left: 25px;
+    &--active {
+      // color: $brand-red;
+      color: red;
+    }
+  }
+
+  &__body {
+    //   padding: spacing(s);
+  }
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}

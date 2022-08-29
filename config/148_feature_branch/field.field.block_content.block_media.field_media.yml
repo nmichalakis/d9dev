@@ -1,0 +1,21 @@
+uuid: 720d1b28-e4d4-45ab-b881-e56e73799699
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_media
+    - field.storage.block_content.field_media
+id: block_content.block_media.field_media
+field_name: field_media
+entity_type: block_content
+bundle: block_media
+label: Media
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings: {  }
+field_type: entity_reference

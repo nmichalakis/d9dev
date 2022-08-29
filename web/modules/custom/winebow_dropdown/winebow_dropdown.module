@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains winebow_dropdown.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function winebow_dropdown_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the winebow_dropdown module.
+    case 'help.page.winebow_dropdown':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Winebow new theme dropdown lists') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function winebow_dropdown_theme() {
+  return [
+    'winebow_dropdown_block' => [
+      'variables' => [
+        'data' => NULL
+      ],
+      'template' => 'winebow-dropdown-block',
+    ],
+  ];
+}
+

@@ -1,0 +1,29 @@
+.fnf-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.fnf-list--item {
+    position: relative;
+    border-left: 15px solid #dedede;
+    background-color: #dedede;
+    color: #7c7c7c;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.fnf-list--item:last-child {
+    border-right: 15px solid #dedede;
+}
+
+.fnf-list--item:hover::after,
+.fnf-list--item:focus::after,
+.fnf-list--item:active::after,
+.fnf-list--item__active::after {
+    content: " ";
+    border-bottom: 1px solid #7c7c7c;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+

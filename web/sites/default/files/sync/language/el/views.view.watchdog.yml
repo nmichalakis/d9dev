@@ -1,0 +1,14 @@
+display:
+  default:
+    display_title: Προεπιλεγμένο
+    display_options:
+      fields:
+        nothing:
+          admin_label: Εικονίδιο
+        name:
+          label: Χρήστης
+        link:
+          label: Λειτουργίες
+      exposed_form:
+        options:
+          submit_button: Φίλτρο

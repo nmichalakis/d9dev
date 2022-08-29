@@ -1,0 +1,5 @@
+name: 'winebow_hero'
+type: module
+description: 'Hero Section Block, for nodes, taxonomies  and everything that needs a hero.'
+core_version_requirement: ^9 || ^10
+package: 'Custom'

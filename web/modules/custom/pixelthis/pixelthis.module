@@ -1,0 +1,91 @@
+<?php
+
+/**
+ * @file
+ * Contains pixelthis.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\Display\EntityFormDisplayInterface;
+use Drupal\views\ViewExecutable;
+use Drupal\paragraphs\Entity\Paragraph;
+
+/**
+ * Implements hook_help().
+ */
+function pixelthis_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the pixelthis module.
+    case 'help.page.pixelthis':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function pixelthis_theme() {
+  return [
+    'pixelthis' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+
+// ...
+
+/**
+* Implements hook_views_pre_render().
+*/
+function pixelthis_views_pre_render(ViewExecutable $view) {
+  $view_id = 'articles';
+  if (isset($view) && ($view->storage->id() === $view_id)) {
+    $view->element['#attached']['library'][] = 'pixelthis/test-js';
+  }
+}
+
+
+/**
+* Implements hook_form_FORM_ID_alter().
+*/
+function pixelthis_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] === 'views-exposed-form-articles-page-1'){
+    $form['field_category_target_id']['#attributes']['class'][] = 'pseudo-list';
+    $form['#attributes']['class'][] = 'form-cats-submit';
+    $form['actions']['submit']['#attributes']['data-submit-alt'] = 'submit-cats';
+  }
+}
+
+
+
+
+/**
+ * Implements hook_ENTITY_TYPE_prepare_form().
+ */
+function pixelthis_node_prepare_form(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Form\FormStateInterface $form_state) {
+  // On new basic page node.
+  if ($entity->bundle() == 'page' && $entity->isNew()) {
+
+    $types = ['telephone', 'first_name', 'last_name'];
+    $field_par_typ_ref = 'field_exhibit_items';
+    foreach ($types as $key => $type) {
+      // Create "text" blank paragraph item.
+      $paragraph = Paragraph::create([
+        'type' => $type, // Paragraph type.
+      ]);
+      $paragraph->isNew();
+
+      // Add new "text" paragraph item to "field_name" (Entity Reference Revisions field).
+      $field = $entity->get($field_par_typ_ref);
+      $field->appendItem($paragraph);
+
+    }
+  }
+}

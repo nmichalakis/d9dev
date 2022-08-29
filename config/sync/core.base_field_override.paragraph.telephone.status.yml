@@ -1,0 +1,22 @@
+uuid: 306ebf4e-1008-4930-a68f-6e1df9105e2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.telephone
+id: paragraph.telephone.status
+field_name: status
+entity_type: paragraph
+bundle: telephone
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

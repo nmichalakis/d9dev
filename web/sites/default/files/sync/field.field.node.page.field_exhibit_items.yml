@@ -1,0 +1,44 @@
+uuid: 7ac6f807-1631-4d10-ad84-e80adad89617
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exhibit_items
+    - node.type.page
+    - paragraphs.paragraphs_type.first_name
+    - paragraphs.paragraphs_type.last_name
+    - paragraphs.paragraphs_type.telephone
+  module:
+    - entity_reference_revisions
+id: node.page.field_exhibit_items
+field_name: field_exhibit_items
+entity_type: node
+bundle: page
+label: 'Exhibit Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      telephone: telephone
+      first_name: first_name
+      last_name: last_name
+    negate: 0
+    target_bundles_drag_drop:
+      exhibit_item:
+        weight: 2
+        enabled: false
+      first_name:
+        weight: 6
+        enabled: true
+      last_name:
+        weight: 7
+        enabled: true
+      telephone:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

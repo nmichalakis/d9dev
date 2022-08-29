@@ -1,0 +1,5 @@
+name: 'winebow dropdown'
+type: module
+description: 'Winebow new theme dropdown lists'
+core_version_requirement: ^9 || ^10
+package: 'Custom'

@@ -1,0 +1,47 @@
+uuid: 6b40a950-62f5-494f-8472-4ce814dade21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.media_music.body
+    - field.field.node.media_music.field_media_category_ref
+    - field.field.node.media_music.field_sound_file
+    - node.type.media_music
+  module:
+    - text
+    - user
+id: node.media_music.default
+targetEntityType: node
+bundle: media_music
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_media_category_ref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_sound_file:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

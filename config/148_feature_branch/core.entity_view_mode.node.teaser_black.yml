@@ -1,0 +1,10 @@
+uuid: b95b6237-950e-4a7d-86f9-f616013eac1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser_black
+label: 'Teaser Black'
+targetEntityType: node
+cache: true
