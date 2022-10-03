@@ -5,8 +5,49 @@
  * Theme functions.
  */
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
+
 // Include all files from the includes directory.
 $includes_path = dirname(__FILE__) . '/includes/*.inc';
 foreach (glob($includes_path) as $filename) {
   require_once dirname(__FILE__) . '/includes/' . basename($filename);
 }
+
+
+$client = new Client();
+
+try {
+
+  $response = $client->get('"');
+  $result = json_decode($response->getBody(), TRUE);
+  ksm($result);
+
+}
+catch (RequestException $e) {
+  // Log exception.
+}
+
+
+ksm('From Search Facets');
+$client = \Drupal::httpClient();
+  $request = $client->post('https://0mosudn32b.execute-api.us-east-1.amazonaws.com/search/facets', [
+    'json' => [
+    ]
+  ]);
+$response = json_decode($request->getBody());
+ksm($response);
+
+
+ksm('From search without GeoDistance');
+$client = \Drupal::httpClient();
+  $request = $client->post('https://0mosudn32b.execute-api.us-east-1.amazonaws.com/search', [
+    'json' => [
+      'page' => 1,
+      'per_page' => '2e3',
+      'brands' => ['Nicosia'],
+      'types' => 'Retail',
+    ]
+  ]);
+$response = json_decode($request->getBody());
+ksm($response);

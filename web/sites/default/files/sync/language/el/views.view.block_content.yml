@@ -1,7 +1,0 @@
-display:
-  default:
-    display_title: Προεπιλεγμένο
-    display_options:
-      fields:
-        operations:
-          label: Λειτουργίες

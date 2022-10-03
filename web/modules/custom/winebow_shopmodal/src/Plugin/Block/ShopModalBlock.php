@@ -1,31 +1,35 @@
 <?php
 
-namespace Drupal\winebow_dropdown\Plugin\Block;
+namespace Drupal\winebow_shopmodal\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 
 /**
- * Provides a 'WinebowDropDownCountryBlock' block.
+ * Provides a 'ShopModalBlock' block.
  *
  * @Block(
- *  id = "winebow_dropdown_country_block",
- *  admin_label = @Translation("Winebow Drop Down List country block"),
+ *  id = "shop_modal_block",
+ *  admin_label = @Translation("Shop modal block"),
  * )
  */
-class WinebowDropDownCountryBlock extends BlockBase {
+class ShopModalBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
    */
   public function build() {
-    $data = [
-     'items' => $this->getListItems(),
-    ];
 
-    return [
-      '#theme' => 'winebow_droplist_country_block',
-      '#data' => $data,
-    ];
+    $data = [
+      'items' => $this->getListItems(),
+     ];
+
+     return [
+       '#theme' => 'winebow_shopmodal_block',
+       '#data' => $data,
+       '#attached' => [
+        'library' => ['winebow_shopmodal/modal'],
+      ],
+     ];
   }
 
   //Some Crazy documentantion

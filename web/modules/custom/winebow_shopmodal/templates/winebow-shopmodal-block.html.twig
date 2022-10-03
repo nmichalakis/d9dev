@@ -1,0 +1,22 @@
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+{% set classes = [
+    'clear-both',
+] %}
+<div{{ attributes.addClass(classes) }}>
+ <h2 class="text-red">I am here</h2>
+<a class="use-ajax"
+    data-dialog-options="{&quot;width&quot;:400}"
+    data-dialog-type="modal"
+    href="/winebow_shopmodal/content/Alabamamama">
+    First node displayed in modal dialog.
+</a>
+</div>

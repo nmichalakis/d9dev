@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains winebow_team.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function winebow_team_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the winebow_team module.
+    case 'help.page.winebow_team':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides grid layouts for the team page') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function winebow_team_theme() {
+  return [
+    'winebow_team' => [
+      'render element' => 'children',
+    ],
+  ];
+}

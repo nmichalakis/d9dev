@@ -1,0 +1,5 @@
+name: 'Winebow Team'
+type: module
+description: 'Provides grid layouts for the team page'
+core_version_requirement: ^9 || ^10
+package: 'Custom'

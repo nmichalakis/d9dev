@@ -1,0 +1,16 @@
+
+winebow_shopmodal.shop_modal_ajax_controller_index:
+  path: '/winebow_shopmodal/replace_cta_buttons/{state}'
+  defaults:
+    _controller: '\Drupal\winebow_shopmodal\Controller\ShopModalAjaxController::index'
+    _title: 'updateModal'
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+winebow_shopmodal.shop_modal_box_container_controller_content:
+  path: '/winebow_shopmodal/content/{state}'
+  defaults:
+    _controller: '\Drupal\winebow_shopmodal\Controller\ShopModalBoxContainerController::content'
+    _title: 'ShopModal Box Data'
+  requirements:
+    _permission: 'access content'

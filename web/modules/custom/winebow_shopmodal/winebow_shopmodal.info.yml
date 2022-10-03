@@ -1,0 +1,7 @@
+name: 'winebow_shopmodal'
+type: module
+description: 'Shop Modal for states markets and contacting sales departments'
+core_version_requirement: ^9 || ^10
+package: 'Custom'
+libraries:
+  - winebow_shopmodal/modal

@@ -1,0 +1,11 @@
+modal:
+  version: VERSION
+  css:
+    theme:
+     css/winebow_shopmodal.style.css: {}
+  js:
+    js/winebow_shopmodal.script.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - core/drupalSettings

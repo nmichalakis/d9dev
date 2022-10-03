@@ -1,0 +1,38 @@
+.map-container {
+  position: relative;
+  height: 100vh;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.map-container p {
+  margin: 0;
+}
+.map-container #tooltip {
+  position: absolute;
+  top: 0;
+  right: 150px;
+  z-index: 4;
+  width: 200px;
+  display: none;
+  background: white;
+  -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.15);
+
+-moz-box-shadow: 0 0 15px rgba(0,0,0,0.15);
+
+box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+.map-container #tooltip h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-left: 20px;
+  text-align: left;
+  line-height: normal;
+}
+.map-container #tooltip ul li {
+  text-align: left;
+}
+#usa-map {
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+}

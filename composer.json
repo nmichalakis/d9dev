@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "~1.0",
         "drupal/admin_toolbar": "^3.0",
         "drupal/allowed_formats": "^1.5",
         "drupal/bootstrap_layouts": "^5.2",
@@ -31,9 +32,10 @@
         "drupal/core-recommended": "^9.3",
         "drupal/double_field": "^4.0",
         "drupal/epp": "^1.2",
+        "drupal/http_response_headers": "^2.0@RC",
         "drupal/paragraphs": "^1.14",
         "drupal/prepopulate": "^2.3",
-        "drupal/radix": "4.x-dev@dev",
+        "drupal/radix": "^5.0",
         "drupal/realistic_dummy_content": "^3.1",
         "drupal/twig_tweak": "^3.1",
         "drupal/xmlsitemap": "^1.2",
@@ -58,6 +60,8 @@
             "locations": {
                 "web-root": "web/"
             }
+        },
+        "patches": {
         },
         "installer-paths": {
             "web/core": [
@@ -112,6 +116,8 @@
     },
     "require-dev": {
         "consolidation/robo": "^3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+        "drupal/coder": "^8.3",
         "drupal/devel": "^4.1",
         "drupal/twig_vardumper": "^3.0",
         "kint-php/kint": "^4.1"

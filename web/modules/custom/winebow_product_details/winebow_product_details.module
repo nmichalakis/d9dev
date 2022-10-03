@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains winebow_product_details.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function winebow_product_details_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the winebow_product_details module.
+    case 'help.page.winebow_product_details':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Winebow Product Details Bundle Subclassess Development') . '</p>';
+      return $output;
+
+    default:
+  }
+}
