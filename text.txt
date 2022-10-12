@@ -2,3 +2,5 @@ This is a test
 and some amends here.
 This is the 3rd time that I commit too.
 This is the 4rth line.
+This is the 5th line.
+This is the 6th line.
