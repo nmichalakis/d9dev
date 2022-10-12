@@ -1,0 +1,3 @@
+This is a test
+and some amends here.
+This is the 3rd time that I commit too.
